@@ -14,4 +14,5 @@ pip-sync requirements.txt dev-requirements.txt
 # Запуск приложения
 
 ```bash
+python main.py
 ```
