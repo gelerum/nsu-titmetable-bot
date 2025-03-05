@@ -91,7 +91,7 @@ async def process_day(message: Message, state: FSMContext) -> None:
     user_data = await state.get_data()
     group = user_data["group"]
     day = message.text.lower()
-    response = requests.get(f"https://table.nsu.ru/group/{group}")
+    await response = requests.get(f"https://table.nsu.ru/group/{group}")
 
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, "html.parser")
